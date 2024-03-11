@@ -1,0 +1,177 @@
+{% extends 'RUser/Header.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        .style7 {color: #FFFF00}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF PARKINSONS ILLNESS STATUS !!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1023" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center" class="style4">ENTER DATA SET DETAILS HERE !!! </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">RID</span></div></td>
+                                    <td><input type="text" name="RID"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">name</span></div></td>
+                                    <td><input type="text" name="name"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">MDVP_Fo_Hz</span></div></td>
+                                    <td><input type="text" name="MDVP_Fo_Hz"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter </strong></span><span class="style4">MDVP_Fhi_Hz</span></div></td>
+                                    <td><input type="text" name="MDVP_Fhi_Hz"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">MDVP_Flo_Hz</span></div></td>
+                                    <td><input type="text" name="MDVP_Flo_Hz"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">MDVP_Jitter</span></div></td>
+                                    <td><input type="text" name="MDVP_Jitter"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">MDVP_Jitter_Abs</span></div></td>
+                                    <td><input type="text" name="MDVP_Jitter_Abs"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">MDVP_RAP</span></div></td>
+                                    <td><input type="text" name="MDVP_RAP"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">MDVP_PPQ</span></div></td>
+                                    <td><input type="text" name="MDVP_PPQ"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter Jitter_DDP</strong></span></div></td>
+                                    <td><input type="text" name="Jitter_DDP"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">MDVP_Shimmer</span></div></td>
+                                    <td><input type="text" name="MDVP_Shimmer"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">MDVP_Shimmer_dB</span></div></td>
+                                    <td><input type="text" name="MDVP_Shimmer_dB"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span><span class="style4"> Shimmer_APQ3</span></div></td>
+                                    <td><input type="text" name="Shimmer_APQ3"></td>
+                                    <td bgcolor="#FF0000"><div align="center"><span class="style7 style2 style4"><strong>Enter</strong></span> <span class="style4">Shimmer_APQ5</span></div></td>
+                                    <td><input type="text" name="Shimmer_APQ5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style4 style2">Enter MDVP_APQ</span></div></td>
+                                    <td><input type="text" name="MDVP_APQ"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter Shimmer_DDA</div></td>
+                                    <td><input type="text" name="Shimmer_DDA"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style7">Enter NHR</div></td>
+                                    <td><input type="text" name="NHR"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter HNR</div></td>
+                                    <td><input type="text" name="HNR"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style7"><strong>Enter RPDE</strong></div></td>
+                                    <td><input type="text" name="RPDE"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4"><span class="style7">Enter</span> DFA</div></td>
+                                    <td><input type="text" name="DFA"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style7"><strong>Enter spread1</strong></div></td>
+                                    <td><input type="text" name="spread1"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4"><span class="style7">Enter</span> spread2 </div></td>
+                                    <td><input type="text" name="spread2"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style7"><strong>Enter D2</strong></div></td>
+                                    <td><input type="text" name="D2"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4"><span class="style7">Enter</span> PPE</div></td>
+                                    <td><input type="text" name="PPE"></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="289" height="44" bgcolor="#FF0000"><div align="center" class="style7"></div></td>
+                                    <td width="209">&nbsp;</td>
+                                    <td width="331"><input name="submit" type="submit" class="style1" value="Predict"></td>
+                                    <td width="174">&nbsp;</td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table width="846" height="75" border="0" align="center" >
+                                    <tr><td width="534" bgcolor="#FF0000"><div align="center"><span class="style6">FUTURE PREDICTED PARKINSONS ILLNESS STATUS </span></div></td>
+
+
+
+                                      <td width="302" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{objs}}</div></td></tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

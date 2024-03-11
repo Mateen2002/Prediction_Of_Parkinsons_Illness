@@ -1,0 +1,128 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">View Parkinsons Illness Type Details </p>
+                            <hr>
+                            <div class="tweettext">
+                               <table border="5" align="center" bordercolor="#FF00FF">
+                               <tr>
+
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">RID</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">name</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">MDVP_Fo_Hz</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">MDVP_Fhi_Hz</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">MDVP_Flo_Hz</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">MDVP_Jitter</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">MDVP_Jitter_Abs</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">MDVP_RAP</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">MDVP_PPQ</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Jitter_DDP</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">MDVP_Shimmer</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">MDVP_Shimmer_dB</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Shimmer_APQ3</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Shimmer_APQ5</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">MDVP_APQ</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Shimmer_DDA</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">NHR</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">HNR</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">RPDE</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">DFA</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">spread1</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">spread2</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">D2	</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">PPE</span></div></td>
+<td bgcolor="#FFFF00"><div align="center" class="style1"><span class="style8 style6">Prediction</span></div></td>
+
+
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.RID}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.name}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MDVP_Fo_Hz}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MDVP_Fhi_Hz}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MDVP_Flo_Hz}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MDVP_Jitter}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MDVP_Jitter_Abs}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MDVP_RAP}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MDVP_PPQ}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Jitter_DDP}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MDVP_Shimmer}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MDVP_Shimmer_dB}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Shimmer_APQ3}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Shimmer_APQ5}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.MDVP_APQ}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Shimmer_DDA}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.NHR}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.HNR}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.RPDE}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.DFA}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.spread1}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.spread2}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.D2}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.PPE}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Prediction}}</td>
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
